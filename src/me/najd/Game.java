@@ -15,7 +15,8 @@ public class Game {
     }
     private final int[][] board = new int[3][3];
     public boolean isEmpty(int r,int c) {
-        return board[r][c] == 0;
+        if (r > -1 && c > -1 && r < 3 && c < 3) return board[r][c] == 0;
+        return false;
     }
     public boolean playMove(int r, int c) {
         if (this.isEmpty(r,c) && r < 3 && c < 3) {
