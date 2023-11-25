@@ -28,10 +28,7 @@ public class Main {
             boolean legal = playGame.playMove(R,C);
             if (legal) {
                 int whoWon = playGame.hasWin();
-                if (whoWon == 1) {
-                    System.out.println(Game.fixPlayer(whoWon) + "Wins!");
-                    Win = true;
-                } else if (whoWon == 2) {
+                if (whoWon != 0) {
                     System.out.println(Game.fixPlayer(whoWon) + "Wins!");
                     Win = true;
                 } else if (playGame.getFreeMoves() == 0) {
