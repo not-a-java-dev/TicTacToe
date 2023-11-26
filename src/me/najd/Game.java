@@ -176,8 +176,10 @@ public class Game {
                 if (row != r) {
                     System.out.print(Game.fixPlayer(this.board[row][col]));
                 }
-                if (row == r) {
+                if (row == r && this.board[row][col] == 0) {
                     System.out.print(" # ");
+                } else if (row == r){
+                    System.out.print(Game.fixPlayer(this.board[row][col]));
                 }
 
             }
@@ -194,11 +196,13 @@ public class Game {
     public void printHighlightedColumn(int c) {
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 3; col++) {
-                if (col != c) {
+                if (col != c ) {
                     System.out.print(Game.fixPlayer(this.board[row][col]));
                 }
-                if (col == c) {
+                if (col == c && this.board[row][col] == 0) {
                     System.out.print(" # ");
+                } else if (col == c) {
+                    System.out.print(Game.fixPlayer(this.board[row][col]));
                 }
             }
             System.out.println();
