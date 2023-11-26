@@ -134,6 +134,12 @@ public class Game {
         }
         return 0;
     }
+
+    /**
+     * Get the numbers of empty spaces.
+     * This is used to see if there is a draw or not
+     * @return an {@link Integer} of moves left
+     */
     public int getFreeMoves() {
         int free = 0;
         for (int r = 0; r < 3; r++) {
